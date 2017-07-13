@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 """
-Wagtail readinglevel plugin that adds reading level check functionality to rich text editors.
+Installs the Wagtail readinglevel plugin that adds reading level check
+functionality to rich text editors.This helps when trying to create content
+that conforms to the WCAG 2.0
 """
 
 from setuptools import setup, find_packages
