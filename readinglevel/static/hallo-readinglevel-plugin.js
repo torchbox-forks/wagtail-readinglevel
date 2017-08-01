@@ -31,6 +31,12 @@ $(function (){
 	var widget_rich_text_areas = $('.widget-hallo_rich_text_area .richtext');
 
     if(widget_rich_text_areas) {
+        // Constants for our reading level calculation
+        // These are part of the Automated Readability Index calculation
+        // https://en.wikipedia.org/wiki/Automated_readability_index
+        var CHARACTER_WEIGHT = 4.71;
+        var SENTENCE_WEIGHT = 0.5;
+        var BASE = 21.43;
 
         // Loop through the streamfield rich text areas
         widget_rich_text_areas.each(function() {
@@ -48,15 +54,19 @@ $(function (){
             }
             richTextArea.on('hallomodified', function(event, data) {
                 var text = $(richTextArea).text()
+
+                var charCount = 0;
+                var wordCount = 0;
+                var sentenceCount = 0;
                 
                 // Calculate the character count
-                var charCount = text.length;    
+                charCount = text.length;    
 
                 // Calculate the word count
-                var wordCount = text.split(" ").length;
+                wordCount = text.split(" ").length;
 
                 // Calculate the sentence count
-                var sentenceCount = (text.replace(/\w[.?!](\s|$)/g, "$1|").split("|").length) - 1;
+                sentenceCount = (text.replace(/\w[.?!](\s|$)/g, "$1|").split("|").length) - 1;
 
                 // If we have an empty first value in the array we know our text box is actually empty
                 // so we need to minus 1 from our word count
@@ -64,8 +74,19 @@ $(function (){
                     wordCount -= 1;
                 }
 
+                var readabilityScore = (CHARACTER_WEIGHT * (charCount / wordCount)) 
+                    + (SENTENCE_WEIGHT * (wordCount / sentenceCount)) - BASE;
+
+                var readingAge = (readabilityScore + 4.).toFixed(1);
+
                 // Modify the help area to include the new information
-                richTextParent.find('p.help').text("Char count: " + charCount +  " Word count: " + wordCount + " Sentences: " + sentenceCount);
+                if (isFinite(readingAge)) {
+                    if (readingAge > 18) { readingAge = "18+" }
+                    richTextParent.find('p.help').html("<strong>Reading age:</strong> " + readingAge);
+                }
+                else {
+                    richTextParent.find('p.help').html("<strong>Reading age:</strong> Not enough content to calculate age score.");
+                }
             });
         });
     }
