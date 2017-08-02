@@ -1,5 +1,5 @@
-$(function (){
-     function calculateReadingAge(richTextArea, richTextParent, helpTextContainer) {
+$(function () {
+    function calculateReadingAge(richTextArea, richTextParent, helpTextContainer) {
         // Constants for our reading level calculation
         // These are part of the Automated Readability Index calculation
         // https://en.wikipedia.org/wiki/Automated_readability_index
@@ -113,7 +113,33 @@ $(function (){
         }
     }
 
+    function watchStreamFields() {
+        var streamFields = document.querySelector('.stream-field');
+        // We only want to observe if we have stream fields on the page
+        if (streamFields) {
+            var target = document.querySelector('.sequence');
+
+            // create an observer instance
+            var observer = new MutationObserver(function (mutations) {
+                mutations.forEach(function (mutation) {
+                    setUpStreamFieldRTFs();
+                });
+            });
+
+            // configuration of the observer:
+            var config = {
+                attributes: true,
+                childList: true,
+                characterData: true
+            };
+
+            // pass in the target node, as well as the observer options
+            observer.observe(target, config);
+        }
+    }
+
     // Call the functions once on initial run
     setUpRTfs();
     setUpStreamFieldRTFs();
+    watchStreamFields();
 });
