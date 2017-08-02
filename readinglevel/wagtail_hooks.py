@@ -21,8 +21,6 @@ def editor_js():
     )
     return js_includes + format_html(
         """
-        <script>
-            registerHalloPlugin('demoeditor');
-        </script>
+        <script></script>
         """
     )
