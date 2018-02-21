@@ -4,6 +4,12 @@ wagtail-readinglevel
 A lightweight Wagtail plugin to determine the reading level of of text
 input into a rich text field.
 
+Now supports both Wagtail 2.0 (Draftail) and Wagtail 1.x (Hallo.js).
+
+Installation
+------------
+```pip install wagtail-readinglevel```
+
 Usage
 -----
 
