@@ -9,13 +9,13 @@ from django.conf import settings
 from django.utils.html import format_html, format_html_join
 
 # Wagtail core imports
-from wagtail.wagtailcore import hooks
+from wagtail.core import hooks
 
 
 @hooks.register('insert_editor_js')
 def editor_js():
     """ Adds additional JavaScript files or code snippets to the page editor. """
-    js_files = ['hallo-readinglevel-plugin.js']
+    js_files = ['hallo-readinglevel-plugin.js','draftail-readinglevel-plugin.js']
     js_includes = format_html_join('\n', '<script src="{0}{1}"></script>',
         ((settings.STATIC_URL, filename) for filename in js_files)
     )
