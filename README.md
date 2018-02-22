@@ -3,11 +3,13 @@ A lightweight Wagtail plugin to determine the reading level of of text input int
 
 Now supports both Wagtail 2.0 (Draftail) and Wagtail 1.x (Hallo.js).
 
+![Screenshot](readingage.jpg)
+
 ## Installation
-```pip install wagtail-readinglevel```
+- ```pip install wagtail-readinglevel```
 
 ## Usage
-Once installed add 'readinglevel' to your list of installed apps. You will then see the reading level calculation displayed in the help text of all rich text fields in your Wagtail admin area.
+Once installed add 'wagtailreadinglevel' to your list of installed apps. You will then see the reading level calculation displayed in the help text of all rich text fields in your Wagtail admin area.
 
 ## Early development
 This repository has just been created, so expect things to change a lot and change fast. The end goal is to make it easy for content writers to determine the reading level of any copy they input into a rich text field in Wagtail.
