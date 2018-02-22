@@ -8,7 +8,7 @@ that conforms to the WCAG 2.0
 from setuptools import setup, find_packages
 
 setup(name='wagtail-readinglevel',
-      version='2.0',
+      version='2.0.1',
       description='Determine reading age of a piece of text.',
       url='http://github.com/vixdigital/wagtail-readinglevel',
       author='VIX Digital',
