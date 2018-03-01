@@ -30,7 +30,7 @@ $(function () {
             console.log(wordArrayNoSpaces);
     
             // Calculate the sentence count
-            sentenceCount = (text.replace(/\w[.?!](\s|$)/g, "$1|").split("|").length) - 1;
+            sentenceCount = (text.replace(/\S[.?!](\s|$)/g, "$1|").split("|").length) - 1;
     
             // If we have an empty first value in the array we know our text box is actually empty
             // so we need to minus 1 from our word count
