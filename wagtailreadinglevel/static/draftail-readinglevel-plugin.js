@@ -16,11 +16,18 @@ $(function () {
             var wordCount = 0;
             var sentenceCount = 0;
             
+            var textClean = text.replace(/[^a-zA-Z ]/g, "");
+            
             // Calculate the character count
-            charCount = text.length; 
+            textNoSpace = textClean.replace(/\s/g, "");
+            textNoPeriod = textNoSpace.replace(/\./g, "");
+            charCount = textNoPeriod.length; 
     
-            // Calculate the word count
-            wordCount = text.split(" ").length;
+            // Calculate the word count -----------------
+            var wordArray = textClean.split(" ");
+            var wordArrayNoSpaces = wordArray.filter(v=>v!='');
+            wordCount = wordArrayNoSpaces.length;
+            console.log(wordArrayNoSpaces);
     
             // Calculate the sentence count
             sentenceCount = (text.replace(/\w[.?!](\s|$)/g, "$1|").split("|").length) - 1;
@@ -34,7 +41,7 @@ $(function () {
             var readabilityScore = (CHARACTER_WEIGHT * (charCount / wordCount)) 
                 + (SENTENCE_WEIGHT * (wordCount / sentenceCount)) - BASE;
     
-            var readingAge = (readabilityScore + 4.).toFixed(1);
+            var readingAge = (readabilityScore + 4).toFixed(1);
             // Modify the help area to include the new information
             if (isFinite(readingAge)) {
                 if (readingAge > 18) { readingAge = "18+" }
