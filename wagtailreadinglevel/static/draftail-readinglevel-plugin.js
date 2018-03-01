@@ -27,7 +27,6 @@ $(function () {
             var wordArray = textClean.split(" ");
             var wordArrayNoSpaces = wordArray.filter(v=>v!='');
             wordCount = wordArrayNoSpaces.length;
-            console.log(wordArrayNoSpaces);
     
             // Calculate the sentence count
             sentenceCount = (text.replace(/\S[.?!](\s|$)/g, "$1|").split("|").length) - 1;

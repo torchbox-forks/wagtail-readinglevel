@@ -15,14 +15,20 @@ $(function () {
         var wordCount = 0;
         var sentenceCount = 0;
         
+        var textClean = text.replace(/[^a-zA-Z ]/g, "");
+        
         // Calculate the character count
-        charCount = text.length;    
+        textNoSpace = textClean.replace(/\s/g, "");
+        textNoPeriod = textNoSpace.replace(/\./g, "");
+        charCount = textNoPeriod.length; 
 
-        // Calculate the word count
-        wordCount = text.split(" ").length;
+        // Calculate the word count -----------------
+        var wordArray = textClean.split(" ");
+        var wordArrayNoSpaces = wordArray.filter(v=>v!='');
+        wordCount = wordArrayNoSpaces.length;
 
         // Calculate the sentence count
-        sentenceCount = (text.replace(/\w[.?!](\s|$)/g, "$1|").split("|").length) - 1;
+        sentenceCount = (text.replace(/\S[.?!](\s|$)/g, "$1|").split("|").length) - 1;
 
         // If we have an empty first value in the array we know our text box is actually empty
         // so we need to minus 1 from our word count
@@ -33,7 +39,7 @@ $(function () {
         var readabilityScore = (CHARACTER_WEIGHT * (charCount / wordCount)) 
             + (SENTENCE_WEIGHT * (wordCount / sentenceCount)) - BASE;
 
-        var readingAge = (readabilityScore + 4.).toFixed(1);
+        var readingAge = (readabilityScore + 4).toFixed(1);
 
         // Modify the help area to include the new information
         if (isFinite(readingAge)) {
