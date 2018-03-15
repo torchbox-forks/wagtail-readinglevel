@@ -8,7 +8,7 @@ const TOOLBAR_ICON = null;
 /*
  * A  control that displays the reading age of the content inside this rich text field.
  */
-const ReadingTime = ({ getEditorState }) => {
+const ReadingLevel = ({ getEditorState }) => {
     const editorState = getEditorState();
     const content = editorState.getCurrentContent();
     const text = content.getPlainText();
@@ -34,8 +34,8 @@ const ReadingTime = ({ getEditorState }) => {
     );
 };
 
-ReadingTime.propTypes = {
+ReadingLevel.propTypes = {
     getEditorState: PropTypes.func.isRequired,
 };
 
-export default ReadingTime;
+export default ReadingLevel;

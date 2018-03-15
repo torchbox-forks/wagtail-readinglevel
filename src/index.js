@@ -1,4 +1,4 @@
-import ReadingTime from "./draftail-component";
+import ReadingLevel from "./draftail-component";
 
 
-window.draftail.registerControl(ReadingTime);
+window.draftail.registerControl(ReadingLevel);
