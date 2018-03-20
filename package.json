@@ -1,6 +1,6 @@
 {
   "name": "wagtail-readinglevel",
-  "version": "3.0.1b",
+  "version": "3.0.2b",
   "description": "A plugin that adds a reading level calculation to rich text fields.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
