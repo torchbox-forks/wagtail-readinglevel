@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
+import React, { PureComponent } from 'react';
 
 import Icon from './Icon';
 

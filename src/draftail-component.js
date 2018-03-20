@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
+import React from 'react';
 import { ToolbarButton } from './lib';
 import readinglevel from './lib/helpers/readinglevel';
 
-const React = window.React;
 const TOOLBAR_ICON = null;
 
 /*
