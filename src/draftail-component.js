@@ -23,7 +23,7 @@ const ReadingLevel = ({ getEditorState }) => {
 
     return (
         <ToolbarButton
-            name="READING_TIME"
+            name="READING_LEVEL"
             icon={TOOLBAR_ICON}
             label={`${message}`}
             onClick={() => {
