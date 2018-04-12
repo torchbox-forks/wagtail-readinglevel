@@ -1,7 +1,7 @@
 # wagtail-readinglevel
 A lightweight Wagtail plugin to determine the reading level of of text input into a rich text field.
 
-!! This is an experimental build meant to test yet unreleased api features in Wagtail. !!
+!! This is an experimental build meant to test yet unreleased api features in Wagtail. It uses a monkeypatch to work specifically with Wagtail 2.0 and will likely break in a future release of Wagtail. !!
 
 ![Screenshot](readingage.jpg)
 
