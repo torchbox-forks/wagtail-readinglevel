@@ -1,21 +1,15 @@
 # wagtail-readinglevel
-A lightweight Wagtail plugin to determine the reading level of of text input into a rich text field.
+A lightweight Wagtail plugin to determine the reading level of text input into a rich text field.
+
+Currently there are two available modes:
+1. (Default) Reading Age - calculated using the [Automated Readability Index](https://en.wikipedia.org/wiki/Automated_readability_index) ![Reading Age](readingage.jpg)
+2. SMOG Index - calculates the [SMOG Index](https://en.wikipedia.org/wiki/SMOG) (only suitable for English). ![Smog Index](smogindex.jpg)
 
 !! This is an experimental build meant to test yet unreleased api features in Wagtail. It uses a monkeypatch to work specifically with Wagtail 2.0 and will likely break in a future release of Wagtail. !!
 
-![Screenshot](readingage.jpg)
-
 ## Installation
 - ```pip install wagtail-readinglevel```
+- add ```wagtailreadinglevel``` and/or ```wagtailreadinglevelsmog``` to your list of installed apps AFTER all wagtail app includes (e.g. wagtail.admin, wagtail.core etc.).
 
 ## Usage
-Once installed add 'wagtailreadinglevel' to your list of installed apps AFTER all wagtail app includes (e.g. wagtail.admin, wagtail.core etc). 
-  
-Once installed You will see the reading level calculation displayed in the toolbar of all rich text fields in your Wagtail admin area.
-
-## Early development
-This repository has just been created, so expect things to change a lot and change fast. The end goal is to make it easy for content writers to determine the reading level of any copy they input into a rich text field in Wagtail.
-This helps with meeting the WCAG 2.0 readability standards.
-
-## Contributing
-Contributing will be encouraged soon, we just need to get a few of the core files and concepts in place first. Feel free to contact Chris (chris@vix.digital) if you have any insights into this kind of thing that you'd like to share, all of that kind of thing is much appreciated!
+Once installed You will see the reading level and/or smog index displayed in the toolbar of all rich text fields in your Wagtail admin area (depending on which you added to your list of installed apps).
