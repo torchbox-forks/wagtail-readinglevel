@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/automated-index.js',
   output: {
     filename: 'wagtailreadinglevel.bundle.js',
     path: path.resolve(__dirname, 'wagtailreadinglevel/static')
