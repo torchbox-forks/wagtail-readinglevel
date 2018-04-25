@@ -1,3 +1,3 @@
-import SmogIndex from "./smog-component";
+import SmogIndex from "./react-components/smog";
 
 window.draftail.registerControl(SmogIndex);

@@ -1,15 +1,12 @@
 'use strict';
 
-function readingLevel(text) {
+function CalculateReadingLevel(text) {
     // Constants for our reading level calculation
     // These are part of the Automated Readability Index calculation
     // https://en.wikipedia.org/wiki/Automated_readability_index
     var CHARACTER_WEIGHT = 4.71;
     var SENTENCE_WEIGHT = 0.5;
     var BASE = 21.43;
-
-    // Turn the html into plain text
-    var text = text;
 
     // Create the variables to hold the character, word and sentence counts
     var charCount = 0;
@@ -60,4 +57,4 @@ function readingLevel(text) {
 /**
  * Export
  */
-module.exports = readingLevel;
+module.exports = CalculateReadingLevel;

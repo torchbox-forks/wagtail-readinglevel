@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { ToolbarButton } from './lib';
-import CalculateSmogIndex from './lib/helpers/smogindex';
+import { ToolbarButton } from '../lib';
+import CalculateSmogIndex from '../lib/helpers/smogindex';
 
 const TOOLBAR_ICON = null;
 

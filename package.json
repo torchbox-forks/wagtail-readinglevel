@@ -1,10 +1,10 @@
 {
   "name": "wagtail-readinglevel",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "Wagtail plugin that adds reading level calculations to Draftail.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack && webpack --config webpack.smog.config.js"
+    "build": "webpack && webpack --config webpack.smog.config.js && webpack --config webpack.coleman.config.js"
   },
   "repository": {
     "type": "git",
