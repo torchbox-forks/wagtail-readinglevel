@@ -1,3 +1,3 @@
-import ReadingLevel from "./draftail-component";
+import ReadingLevel from "./react-components/automated";
 
 window.draftail.registerControl(ReadingLevel);

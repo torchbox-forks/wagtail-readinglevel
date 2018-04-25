@@ -1,6 +1,6 @@
 'use strict';
 
-function readingLevel(text) {
+function CalculateReadingLevel(text) {
     // Constants for our reading level calculation
     // These are part of the Automated Readability Index calculation
     // https://en.wikipedia.org/wiki/Automated_readability_index
@@ -60,4 +60,4 @@ function readingLevel(text) {
 /**
  * Export
  */
-module.exports = readingLevel;
+module.exports = CalculateReadingLevel;
