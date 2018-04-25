@@ -8,9 +8,6 @@ function CalculateReadingLevel(text) {
     var SENTENCE_WEIGHT = 0.5;
     var BASE = 21.43;
 
-    // Turn the html into plain text
-    var text = text;
-
     // Create the variables to hold the character, word and sentence counts
     var charCount = 0;
     var wordCount = 0;
