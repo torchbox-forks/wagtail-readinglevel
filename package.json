@@ -1,6 +1,6 @@
 {
   "name": "wagtail-readinglevel",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "description": "Wagtail plugin that adds reading level calculations to Draftail.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

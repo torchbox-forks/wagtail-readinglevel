@@ -6,6 +6,7 @@ Currently there are two available modes:
 2. SMOG Index - calculated the [SMOG Index](https://en.wikipedia.org/wiki/SMOG) (only suitable for English).
 3. Coleman-Liau Index - calculated using the [Coleman-Liau Index](https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index).
 4. Flesch Score - calculated using the [Flesch Reading Ease forumal](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests) (only suitable for English).
+5. Gunning Fog Index - calculated using the [Gunning Fog Index](https://en.wikipedia.org/wiki/Gunning_fog_index)
 
 !! This is an experimental build meant to test yet unreleased api features in Wagtail. It uses a monkeypatch to work specifically with Wagtail 2.0 and will likely break in a future release of Wagtail. !!
 
@@ -16,6 +17,7 @@ Currently there are two available modes:
   - ```wagtailreadinglevelsmog``` for SMOG Index
   - ```wagtailreadinglevelcoleman``` for Coleman-Liau Index
   - ```wagtailreadinglevelflesch``` for Flesh Reading Ease Score
+  - ```wagtailreadinglevelfog``` for the Gunning Fog index
 
 ## Usage
 Once installed You will see the reading level and/or smog index displayed in the toolbar of all rich text fields in your Wagtail admin area (depending on which you added to your list of installed apps).
