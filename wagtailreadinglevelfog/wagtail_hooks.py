@@ -11,6 +11,10 @@ from wagtail.core import hooks
 
 @hooks.register('register_rich_text_features')
 def register_readinglevel_feature(features):
+    """
+    Registering the `readinglevelfog` feature, which shows a reading age in the Draftail editor,
+    calculated using the Gunning Fog Index
+    """
     feature_name = 'readinglevelfog'
     type_ = feature_name.upper()
     control = {

@@ -11,6 +11,10 @@ from wagtail.core import hooks
 
 @hooks.register('register_rich_text_features')
 def register_readinglevel_feature(features):
+    """
+    Registering the `readinglevelcoleman` feature, which shows a reading age in the Draftail editor,
+    calculated using the Coleman–Liau Index
+    """
     feature_name = 'readinglevelcoleman'
     type_ = feature_name.upper()
     control = {
