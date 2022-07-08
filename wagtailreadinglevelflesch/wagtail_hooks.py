@@ -6,7 +6,11 @@ from __future__ import unicode_literals
 
 # Wagtail core imports
 from wagtail.admin.rich_text.editors.draftail import features as draftail_features
-from wagtail.core import hooks
+try:
+    from wagtail import hooks
+except ImportError:
+    # Wagtail<3.0
+    from wagtail.core import hooks
 
 
 @hooks.register('register_rich_text_features')
