@@ -18,6 +18,12 @@ Currently there are two available modes:
   - ```wagtailreadinglevelcoleman``` for Coleman-Liau Index
   - ```wagtailreadinglevelflesch``` for Flesh Reading Ease Score
   - ```wagtailreadinglevelfog``` for the Gunning Fog index
+- The plugin will show automatically for any rich text fields which don't use a limited ```features``` list. For feature-limited fields, you'll need to add their names to that list. The names are:
+  - ```readinglevel``` for Automated Readability Index (Reading Age)
+  - ```readinglevelsmog``` for SMOG Index
+  - ```readinglevelcoleman``` for Coleman-Liau Index
+  - ```readinglevelflesch``` for Flesch Reading Ease Score
+  - ```readinglevelfog``` for the Gunning Fog index
 
 ## Usage
 Once installed You will see the reading level and/or smog index displayed in the toolbar of all rich text fields in your Wagtail admin area (depending on which you added to your list of installed apps).

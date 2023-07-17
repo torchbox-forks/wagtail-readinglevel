@@ -4,23 +4,29 @@ On loading, Wagtail will find this file and execute the contents.
 """
 from __future__ import unicode_literals
 
-# Django imports
-from django.conf import settings
-from django.utils.html import format_html, format_html_join
-
 # Wagtail core imports
-from wagtail.core import hooks
+from wagtail.admin.rich_text.editors.draftail import features as draftail_features
+from wagtail import hooks
 
 
-@hooks.register('insert_editor_js')
-def editor_js():
-    """ Adds additional JavaScript files or code snippets to the page editor. """
-    js_files = ['wagtailadmin/js/draftail.js','api-monkeypatch.js','wagtailreadinglevel.coleman.bundle.js']
-    js_includes = format_html_join('\n', '<script src="{0}{1}"></script>',
-        ((settings.STATIC_URL, filename) for filename in js_files)
+@hooks.register('register_rich_text_features')
+def register_readinglevel_feature(features):
+    """
+    Registering the `readinglevelcoleman` feature, which shows a reading age in the Draftail editor,
+    calculated using the Coleman–Liau Index
+    """
+    feature_name = 'readinglevelcoleman'
+    type_ = feature_name.upper()
+    control = {
+        'type': type_,
+        'description': 'Reading level - Coleman-Liau',
+    }
+    features.register_editor_plugin(
+        'draftail',
+        feature_name,
+        draftail_features.EntityFeature(
+            control,
+            js=['api-monkeypatch.js', 'wagtailreadinglevel.coleman.bundle.js']
+        )
     )
-    return js_includes + format_html(
-        """
-        <script></script>
-        """
-    )
+    features.default_features.append(feature_name)
