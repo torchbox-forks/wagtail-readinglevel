@@ -27,3 +27,9 @@ Currently there are two available modes:
 
 ## Usage
 Once installed You will see the reading level and/or smog index displayed in the toolbar of all rich text fields in your Wagtail admin area (depending on which you added to your list of installed apps).
+
+## Contributing
+
+The original author of this plugin has no plans to continue development.
+
+[Torchbox](https://torchbox.com/) will continue to maintain this package [here](https://github.com/torchbox-forks/wagtail-readinglevel) for the foreseeable future. We won't be releasing the package on PyPi but will be managing releases via Github. If you would like to contribute, please feel free to submit a pull request.
