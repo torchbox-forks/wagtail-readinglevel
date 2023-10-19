@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: "production", // or "development"
   entry: './src/coleman-index.js',
   output: {
     filename: 'wagtailreadinglevel.coleman.bundle.js',

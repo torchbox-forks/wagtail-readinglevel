@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: "production", // or "development"
   entry: './src/fog-index.js',
   output: {
     filename: 'wagtailreadinglevel.fog.bundle.js',

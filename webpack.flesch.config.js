@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: "production", // or "development"
   entry: './src/flesch-index.js',
   output: {
     filename: 'wagtailreadinglevel.flesch.bundle.js',

@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: "production", // or "development"
   entry: './src/smog-index.js',
   output: {
     filename: 'wagtailreadinglevel.smog.bundle.js',

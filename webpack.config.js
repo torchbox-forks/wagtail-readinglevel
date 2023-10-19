@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: "production", // or "development"
   entry: './src/automated-index.js',
   output: {
     filename: 'wagtailreadinglevel.bundle.js',

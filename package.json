@@ -9,7 +9,8 @@
     "build-coleman": "webpack --config webpack.coleman.config.js",
     "build-flesch": "webpack --config webpack.flesch.config.js",
     "build-fog": "webpack --config webpack.fog.config.js",
-    "build": "npm run build-automated && npm run build-smog && npm run build-coleman && npm run build-flesch && npm run build-fog"
+    "build": "npm run build-automated && npm run build-smog && npm run build-coleman && npm run build-flesch && npm run build-fog",
+    "build:dev": "webpack --mode development && npm run build-smog && npm run build-coleman && npm run build-flesch && npm run build-fog"
   },
   "repository": {
     "type": "git",
