@@ -17,6 +17,6 @@ setup(name='wagtail-readinglevel',
       packages=find_packages(),
       include_package_data=True,
       install_requires=[
-          'wagtail>=4.1',
+          'wagtail>=2.0',
       ],
       zip_safe=False)
