@@ -4,11 +4,11 @@
   "description": "Wagtail plugin that adds reading level calculations to Draftail.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-automated" : "webpack",
-    "build-smog" : "webpack --config webpack.smog.config.js",
-    "build-coleman" : "webpack --config webpack.coleman.config.js",
-    "build-flesch" : "webpack --config webpack.flesch.config.js",
-    "build-fog" : "webpack --config webpack.fog.config.js",
+    "build-automated": "webpack",
+    "build-smog": "webpack --config webpack.smog.config.js",
+    "build-coleman": "webpack --config webpack.coleman.config.js",
+    "build-flesch": "webpack --config webpack.flesch.config.js",
+    "build-fog": "webpack --config webpack.fog.config.js",
     "build": "npm run build-automated && npm run build-smog && npm run build-coleman && npm run build-flesch && npm run build-fog"
   },
   "repository": {
@@ -23,8 +23,8 @@
   "homepage": "https://github.com/vixdigital/wagtail-readinglevel#readme",
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.41",
-    "@babel/preset-react": "^7.0.0-beta.41",
     "@babel/preset-env": "^7.0.0-beta.41",
+    "@babel/preset-react": "^7.0.0-beta.41",
     "babel-core": "^7.0.0-beta.41",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
@@ -32,7 +32,7 @@
     "webpack-cli": "^3.1.1"
   },
   "dependencies": {
-    "draftail": "^0.17.0",
+    "draftail": "^1.4.1",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "syllable": "^3.0.0"
