@@ -2,11 +2,12 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: path.resolve(__dirname, './src/coleman-index.js'),
+  entry: path.resolve(__dirname, 'src/reading-level.js'),
   output: {
-    path: path.resolve(__dirname, 'wagtailreadinglevelcoleman/static'),
-    filename: 'wagtailreadinglevel.coleman.bundle.js',
+    path: path.resolve(__dirname, 'wagtailreadinglevel/static'),
+    filename: 'wagtailreadinglevel.bundle.js',
   },
+
   module: {
     rules: [
         {

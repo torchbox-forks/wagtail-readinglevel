@@ -1,10 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/fog-index.js',
+  mode: 'production',
+  entry: path.resolve(__dirname, './src/fog-index.js'),
   output: {
+    path: path.resolve(__dirname, 'wagtailreadinglevelfog/static'),
     filename: 'wagtailreadinglevel.fog.bundle.js',
-    path: path.resolve(__dirname, 'wagtailreadinglevelfog/static')
   },
   module: {
     rules: [
@@ -16,7 +17,6 @@ module.exports = {
                 options: {
                     presets: [
                         '@babel/preset-env',
-                        '@babel/preset-react'
                     ]
                 }
             }
