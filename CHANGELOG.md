@@ -2,10 +2,8 @@
 
 ## Unreleased
 
-- [release-prep](https://github.com/torchbox-forks/wagtail-readinglevel/tree/release-prep)
-- Add a changelog
-- Remove README.rst
-- Update README.md
+- Fixes issues found with Wagtail 5.1 new way to create draftail extensions
+- Add reminder to use the official PyPi 3.5.0 release for Wagtail < 5.1
 
 ## 4.0.0
 

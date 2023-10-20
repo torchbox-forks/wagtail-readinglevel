@@ -8,6 +8,13 @@ Currently there are two available modes:
 4. Flesch Score - calculated using the [Flesch Reading Ease forumal](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests) (only suitable for English).
 5. Gunning Fog Index - calculated using the [Gunning Fog Index](https://en.wikipedia.org/wiki/Gunning_fog_index)
 
+## Compatibility
+
+- Wagtail >= 5.1
+- Django >= 3.2
+
+if you need to use this package on an earlier Wagtail version than 5.1, you can use the PyPi 3.5.0 release: <https://pypi.org/project/wagtail-readinglevel/3.5.0/>
+
 ## Installation
 
 The package is intended to be installed from Github, not PyPi. To install:
@@ -75,7 +82,7 @@ pip install -e .
 
 ## Run the testing app
 
-There is a basic testing app available in the ```testapp``` directory chnage to that directory and run the following commands:
+There is a basic testing app available in the ```testapp``` directory change to that directory and run the following commands:
 
 ```
 ./manage.py migrate
