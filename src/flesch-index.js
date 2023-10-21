@@ -1,3 +1,4 @@
+import './sass/readinglevel.scss';
 import { CalculateFleschReadingEase } from './helpers/flesch';
 
 /*
@@ -12,9 +13,9 @@ const FleschReadingEase = ({ getEditorState }) => {
     let message = "Flesch Score: N/A";
 
     const elem = 'div';
-    const classNames = 'w-inline-block w-tabular-nums w-help-text w-mr-4';
-    
-    if(!stats) {
+    const classNames = 'tb-indicator';
+
+    if (!stats) {
         return window.React.createElement(elem, { className: classNames }, `${message}`);
     }
 
@@ -22,10 +23,10 @@ const FleschReadingEase = ({ getEditorState }) => {
 
     return window.React.createElement(elem, {
         className: classNames,
-      }, message);
+    }, message);
 };
 
 window.draftail.registerPlugin({
     type: 'readinglevelflesch',
     meta: FleschReadingEase,
-  }, 'controls');
+}, 'controls');
