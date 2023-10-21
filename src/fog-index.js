@@ -1,3 +1,4 @@
+import './sass/readinglevel.scss';
 import { CalculateFogIndex } from './helpers/fog';
 
 /*
@@ -12,9 +13,9 @@ const FogIndex = ({ getEditorState }) => {
     let message = "FOG Index: N/A";
 
     const elem = 'div';
-    const classNames = 'w-inline-block w-tabular-nums w-help-text w-mr-4';
-    
-    if(!stats) {
+    const classNames = 'tb-indicator';
+
+    if (!stats) {
         return window.React.createElement(elem, { className: classNames }, `${message}`);
     }
 
@@ -28,4 +29,4 @@ const FogIndex = ({ getEditorState }) => {
 window.draftail.registerPlugin({
     type: 'readinglevelfog',
     meta: FogIndex,
-  }, 'controls');
+}, 'controls');
