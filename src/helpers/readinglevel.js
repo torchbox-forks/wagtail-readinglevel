@@ -35,7 +35,7 @@ function CalculateReadingLevel(text) {
     const readabilityScore = (CHARACTER_WEIGHT * (charCount / wordCount))
       + (SENTENCE_WEIGHT * (wordCount / sentenceCount)) - BASE;
   
-    const readingAge = (readabilityScore + 4).toFixed(1);
+    let readingAge = (readabilityScore + 4).toFixed(1);
     // Modify the help area to include the new information
     if (isFinite(readingAge)) {
       if (readingAge > 18) { readingAge = "18+" }
