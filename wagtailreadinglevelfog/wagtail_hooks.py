@@ -19,6 +19,6 @@ def register_readinglevel_feature(features):
                 "type": feature_name,
             },
             js=["wagtailreadinglevel.fog.bundle.js"],
-            css={"all": ["wagtailreadinglevel.css"]},
+            css={"all": ["wagtailreadinglevel.bundle.css"]},
         ),
     )
