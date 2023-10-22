@@ -4,7 +4,7 @@ Installs a Wagtail plugin that adds reading level calculations to Draftail.
 This helps content editors create content that conforms to the WCAG 2.0
 """
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 setup(name='wagtail-readinglevel',
       version='3.5.0',

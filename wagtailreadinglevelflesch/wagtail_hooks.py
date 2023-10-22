@@ -6,18 +6,19 @@ from wagtail import hooks
 from wagtail.admin.rich_text.editors.draftail.features import ControlFeature
 
 
-@hooks.register('register_rich_text_features')
+@hooks.register("register_rich_text_features")
 def register_readinglevel_feature(features):
-    feature_name = 'readinglevelflesch'
+    feature_name = "readinglevelflesch"
     features.default_features.append(feature_name)
 
     features.register_editor_plugin(
-        'draftail',
+        "draftail",
         feature_name,
-        ControlFeature({
-            'type': feature_name,
-        },
-        js=['wagtailreadinglevel.flesch.bundle.js'],
-        css={'all': ['wagtailreadinglevel.bundle.css']}
+        ControlFeature(
+            {
+                "type": feature_name,
+            },
+            js=["wagtailreadinglevel.flesch.bundle.js"],
+            css={"all": ["wagtailreadinglevel.bundle.css"]},
         ),
     )
