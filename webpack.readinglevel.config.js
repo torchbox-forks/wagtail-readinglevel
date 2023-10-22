@@ -1,12 +1,12 @@
-const path = require('path');
+const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: 'production',
-  entry: path.resolve(__dirname, 'src/reading-level.js'),
+  mode: "production",
+  entry: path.resolve(__dirname, "src/reading-level.js"),
   output: {
-    path: path.resolve(__dirname, 'wagtailreadinglevel/static'),
-    filename: 'wagtailreadinglevel.bundle.js',
+    path: path.resolve(__dirname, "wagtailreadinglevel/static"),
+    filename: "wagtailreadinglevel.bundle.js",
   },
 
   module: {
@@ -15,13 +15,11 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: [
-              '@babel/preset-env',
-            ]
-          }
-        }
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
       {
         test: /\.scss$/,
