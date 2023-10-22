@@ -1,36 +1,45 @@
-.Draftail-Editor .Draftail-MetaToolbar {
-  background-color: var(--w-color-border-field-hover);
-  transform: translateX(-2px);
-  border-radius: 3px;
-}
+.Draftail-Editor {
+  .Draftail-MetaToolbar {
+    background-color: var(--w-color-border-field-hover);
+    transform: translateX(-2px);
+    border-radius: 3px;
+  }
 
-.Draftail-Editor.Draftail-Editor--focus .Draftail-MetaToolbar {
-  background-color: var(--w-color-focus);
-  color: white;
-  margin: 0 auto;
-}
+  .Draftail-ToolbarGroup {
+    &.Draftail-ToolbarGroup--controls {
+      display: flex;
+      flex-wrap: nowrap;
 
-.Draftail-ToolbarGroup.Draftail-ToolbarGroup--controls {
-  display: flex;
-  flex-wrap: nowrap;
-}
+      .tb-indicator {
+        padding: 0 3px;
+        color: black;
+        font-size: 0.9em;
+        text-wrap: nowrap;
 
-.Draftail-ToolbarGroup.Draftail-ToolbarGroup--controls .tb-indicator {
-  padding: 0 3px;
-  color: black;
-  font-size: 0.9em;
-  text-wrap: nowrap;
-}
+        &::after {
+          content: " | ";
+        }
 
-.Draftail-Editor.Draftail-Editor--focus .Draftail-MetaToolbar .tb-indicator {
-  color: white;
-}
+        &:last-child::after {
+          content: "";
+        }
+      }
+    }
+  }
 
-.Draftail-ToolbarGroup.Draftail-ToolbarGroup--controls .tb-indicator::after {
-  content: " | ";
-}
+  &--focus {
+    .Draftail-MetaToolbar {
+      background-color: var(--w-color-focus);
+      // color: white;
+      margin: 0 auto;
 
-.Draftail-ToolbarGroup.Draftail-ToolbarGroup--controls
-  .tb-indicator:last-child::after {
-  content: "";
+      .Draftail-ToolbarGroup {
+        &.Draftail-ToolbarGroup--controls {
+          .tb-indicator {
+            color: white;
+          }
+        }
+      }
+    }
+  }
 }
