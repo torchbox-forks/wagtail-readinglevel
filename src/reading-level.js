@@ -1,5 +1,5 @@
-import './sass/readinglevel.scss';
-import { CalculateReadingLevel } from './helpers/readinglevel';
+import "./sass/readinglevel.scss";
+import { CalculateReadingLevel } from "./helpers/readinglevel";
 
 /*
  * A  control that displays the reading age of the content inside this rich text field.
@@ -13,23 +13,33 @@ const ReadingLevel = ({ getEditorState }) => {
 
   let message = "Reading Age: N/A";
 
-  const elem = 'div';
-  const classNames = 'tb-indicator';
+  const elem = "div";
+  const classNames = "tb-indicator";
 
   if (!stats) {
-    return window.React.createElement(elem, { className: classNames }, `${message}`);
+    return window.React.createElement(
+      elem,
+      { className: classNames },
+      `${message}`
+    );
   }
 
   message = `Reading age: ${stats.age}, Readability Score: ${stats.score}`;
 
-  return window.React.createElement(elem, {
-    className: classNames,
-  }, message);
+  return window.React.createElement(
+    elem,
+    {
+      className: classNames,
+    },
+    message
+  );
+};
 
-}
-
-window.draftail.registerPlugin({
-  type: 'readinglevel',
-  meta: ReadingLevel,
-  CSS: 'w-inline-block w-tabular-nums w-mr-2',
-}, 'controls');
+window.draftail.registerPlugin(
+  {
+    type: "readinglevel",
+    meta: ReadingLevel,
+    CSS: "w-inline-block w-tabular-nums w-mr-2",
+  },
+  "controls"
+);

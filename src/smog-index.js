@@ -1,5 +1,5 @@
-import './sass/readinglevel.scss';
-import { CalculateSmogIndex } from './helpers/smogindex';
+import "./sass/readinglevel.scss";
+import { CalculateSmogIndex } from "./helpers/smogindex";
 
 /*
  * A  control that displays the smog index of the content inside this rich text field.
@@ -12,22 +12,32 @@ const SmogIndex = ({ getEditorState }) => {
 
   let message = "SMOG Index: N/A";
 
-  const elem = 'div';
-  const classNames = 'tb-indicator';
+  const elem = "div";
+  const classNames = "tb-indicator";
 
   if (!stats) {
-    return window.React.createElement(elem, { className: classNames }, `${message}`);
+    return window.React.createElement(
+      elem,
+      { className: classNames },
+      `${message}`
+    );
   }
 
   message = `SMOG Index: : ${stats.smogIndex}`;
 
-  return window.React.createElement(elem, {
-    className: classNames,
-  }, message);
+  return window.React.createElement(
+    elem,
+    {
+      className: classNames,
+    },
+    message
+  );
+};
 
-}
-
-window.draftail.registerPlugin({
-  type: 'readinglevelsmog',
-  meta: SmogIndex,
-}, 'controls');
+window.draftail.registerPlugin(
+  {
+    type: "readinglevelsmog",
+    meta: SmogIndex,
+  },
+  "controls"
+);

@@ -1,35 +1,36 @@
 .Draftail-Editor .Draftail-MetaToolbar {
-    background-color: var(--w-color-border-field-hover);
-    transform: translateX(-2px);
-    border-radius: 3px;
+  background-color: var(--w-color-border-field-hover);
+  transform: translateX(-2px);
+  border-radius: 3px;
 }
 
 .Draftail-Editor.Draftail-Editor--focus .Draftail-MetaToolbar {
-    background-color: var(--w-color-focus);
-    color: white;
-    margin: 0 auto;
+  background-color: var(--w-color-focus);
+  color: white;
+  margin: 0 auto;
 }
 
 .Draftail-ToolbarGroup.Draftail-ToolbarGroup--controls {
-    display: flex;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .Draftail-ToolbarGroup.Draftail-ToolbarGroup--controls .tb-indicator {
-    padding: 0 3px;
-    color: black;
-    font-size: 0.9em;
-    text-wrap: nowrap;
+  padding: 0 3px;
+  color: black;
+  font-size: 0.9em;
+  text-wrap: nowrap;
 }
 
 .Draftail-Editor.Draftail-Editor--focus .Draftail-MetaToolbar .tb-indicator {
-    color: white;
+  color: white;
 }
 
 .Draftail-ToolbarGroup.Draftail-ToolbarGroup--controls .tb-indicator::after {
-    content: " | ";
+  content: " | ";
 }
 
-.Draftail-ToolbarGroup.Draftail-ToolbarGroup--controls .tb-indicator:last-child::after {
-    content: "";
+.Draftail-ToolbarGroup.Draftail-ToolbarGroup--controls
+  .tb-indicator:last-child::after {
+  content: "";
 }

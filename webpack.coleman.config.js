@@ -1,12 +1,12 @@
-const path = require('path');
+const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: 'production',
-  entry: path.resolve(__dirname, './src/coleman-index.js'),
+  mode: "production",
+  entry: path.resolve(__dirname, "./src/coleman-index.js"),
   output: {
-    path: path.resolve(__dirname, 'wagtailreadinglevelcoleman/static'),
-    filename: 'wagtailreadinglevel.coleman.bundle.js',
+    path: path.resolve(__dirname, "wagtailreadinglevelcoleman/static"),
+    filename: "wagtailreadinglevel.coleman.bundle.js",
   },
   module: {
     rules: [
@@ -14,19 +14,17 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: [
-              '@babel/preset-env',
-            ]
-          }
-        }
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
       {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
-    ]
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
