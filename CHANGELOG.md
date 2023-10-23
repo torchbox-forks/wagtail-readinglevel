@@ -6,6 +6,8 @@
 - Add reminder to use the official PyPi 3.5.0 release for Wagtail < 5.1
 - Add support for Wagtail 6
 - Drop support for Django < 4.2
+- Add pre-commit hooks to run black, isort and flake8
+- Reformat code with black, isort and flake8
 
 ## 4.0.0
 
