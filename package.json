@@ -4,12 +4,12 @@
   "description": "Wagtail plugin that adds reading level calculations to Draftail.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "reading": "webpack --config webpack.readinglevel.config.js",
-    "smog": "webpack --config webpack.smog.config.js",
-    "coleman": "webpack --config webpack.coleman.config.js",
-    "flesch": "webpack --config webpack.flesch.config.js",
-    "fog": "webpack --config webpack.fog.config.js",
-    "build:prod": "npm run reading && npm run smog && npm run coleman && npm run flesch && npm run fog"
+    "build-automated": "webpack --config webpack.readinglevel.config.js",
+    "build-smog": "webpack --config webpack.smog.config.js",
+    "build-coleman": "webpack --config webpack.coleman.config.js",
+    "build-flesch": "webpack --config webpack.flesch.config.js",
+    "build-fog": "webpack --config webpack.fog.config.js",
+    "build": "npm run build-automated && npm run build-smog && npm run build-coleman && npm run build-flesch && npm run build-fog"
   },
   "repository": {
     "type": "git",

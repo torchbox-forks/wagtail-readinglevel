@@ -103,7 +103,7 @@ nvm use && npm install
 Then you can run the following command to build the assets:
 
 ```
-npm run build:prod
+npm run build
 ```
 
 This will compile the sources and place the output in the following respective directories:
