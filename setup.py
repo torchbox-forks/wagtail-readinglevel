@@ -7,7 +7,7 @@ This helps content editors create content that conforms to the WCAG 2.0
 from setuptools import setup, find_packages
 
 setup(name='wagtail-readinglevel',
-      version='3.5.0',
+      version='4.0.1',
       description='Wagtail plugin that adds reading level calculations to Draftail.',
       long_description='Wagtail plugin that adds reading level calculations to Draftail.',
       url='https://github.com/torchbox-forks/wagtail-readinglevel',
