@@ -1,10 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/coleman-index.js',
+  mode: 'production',
+  entry: path.resolve(__dirname, './src/coleman-index.js'),
   output: {
+    path: path.resolve(__dirname, 'wagtailreadinglevelcoleman/static'),
     filename: 'wagtailreadinglevel.coleman.bundle.js',
-    path: path.resolve(__dirname, 'wagtailreadinglevelcoleman/static')
   },
   module: {
     rules: [
@@ -16,7 +17,6 @@ module.exports = {
                 options: {
                     presets: [
                         '@babel/preset-env',
-                        '@babel/preset-react'
                     ]
                 }
             }
