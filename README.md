@@ -10,8 +10,8 @@ Currently there are two available modes:
 
 ## Compatibility
 
-- Wagtail >= 5.1
-- Django >= 3.2
+- Wagtail >= 5.2
+- Django >= 4.2
 
 if you need to use this package on an earlier Wagtail version than 5.1, you can use the PyPi 3.5.0 release: <https://pypi.org/project/wagtail-readinglevel/3.5.0/>
 

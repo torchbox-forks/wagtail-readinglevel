@@ -2,8 +2,10 @@
 
 ## Unreleased
 
-- Fixes issues found with Wagtail 5.1 new way to create draftail extensions
+- Fixes issues found with Wagtail 5
 - Add reminder to use the official PyPi 3.5.0 release for Wagtail < 5.1
+- Add support for Wagtail 6
+- Drop support for Django < 4.2
 
 ## 4.0.0
 
