@@ -1,0 +1,8 @@
+node_modules
+*.html
+venv
+.venv
+.git
+media
+**/static/*.js
+**/static/*.css

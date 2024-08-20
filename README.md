@@ -1,7 +1,9 @@
 # wagtail-readinglevel
+
 A lightweight Wagtail plugin to determine the reading level of text input into a rich text field.
 
 Currently there are two available modes:
+
 1. (Default) Reading Age - calculated using the [Automated Readability Index](https://en.wikipedia.org/wiki/Automated_readability_index).
 2. SMOG Index - calculated the [SMOG Index](https://en.wikipedia.org/wiki/SMOG) (only suitable for English).
 3. Coleman-Liau Index - calculated using the [Coleman-Liau Index](https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index).
@@ -19,36 +21,37 @@ if you need to use this package on an earlier Wagtail version than 5.1, you can 
 
 The package is intended to be installed from Github, not PyPi. To install:
 
-Add the following to your ```requirements.txt``` file:
+Add the following to your `requirements.txt` file:
 
 ```
 -e git+https://github.com/torchbox-forks/wagtail-readinglevel.git@master#egg=wagtail-readinglevel
 ```
 
-or if you are using poetry Run 
+or if you are using poetry Run
 
 ```
 poetry add git+https://github.com/torchbox-forks/wagtail-readinglevel.git@master#egg=wagtail-readinglevel
-``````
+```
 
-Add the desired plugin app names to your list of installed apps AFTER all wagtail app includes (e.g. wagtail.admin, wagtail.core etc.). 
+Add the desired plugin app names to your list of installed apps AFTER all wagtail app includes (e.g. wagtail.admin, wagtail.core etc.).
 
 The names are:
-  - ```wagtailreadinglevel``` for Automated Readability Index (Reading Age)
-  - ```wagtailreadinglevelsmog``` for SMOG Index
-  - ```wagtailreadinglevelcoleman``` for Coleman-Liau Index
-  - ```wagtailreadinglevelflesch``` for Flesh Reading Ease Score
-  - ```wagtailreadinglevelfog``` for the Gunning Fog index
 
-The plugin will show results for any rich text fields which don't use a limited ```features``` list.
+- `wagtailreadinglevel` for Automated Readability Index (Reading Age)
+- `wagtailreadinglevelsmog` for SMOG Index
+- `wagtailreadinglevelcoleman` for Coleman-Liau Index
+- `wagtailreadinglevelflesch` for Flesh Reading Ease Score
+- `wagtailreadinglevelfog` for the Gunning Fog index
+
+The plugin will show results for any rich text fields which don't use a limited `features` list.
 
 For feature-limited fields, you'll need to add their names to that list. The names are:
 
-  - ```readinglevel``` for Automated Readability Index (Reading Age)
-  - ```readinglevelsmog``` for SMOG Index
-  - ```readinglevelcoleman``` for Coleman-Liau Index
-  - ```readinglevelflesch``` for Flesch Reading Ease Score
-  - ```readinglevelfog``` for the Gunning Fog index
+- `readinglevel` for Automated Readability Index (Reading Age)
+- `readinglevelsmog` for SMOG Index
+- `readinglevelcoleman` for Coleman-Liau Index
+- `readinglevelflesch` for Flesch Reading Ease Score
+- `readinglevelfog` for the Gunning Fog index
 
 ## Usage
 
@@ -82,7 +85,7 @@ pip install -e .
 
 ## Run the testing app
 
-There is a basic testing app available in the ```testapp``` directory change to that directory and run the following commands:
+There is a basic testing app available in the `testapp` directory change to that directory and run the following commands:
 
 ```
 ./manage.py migrate
@@ -116,4 +119,4 @@ wagtailreadinglevelflesch/static
 wagtailreadinglevelfog/static
 ```
 
-The javascript file are loaded by each wagtail_hook. The hooks are defined in the ```wagtail_hooks.py``` file in each app.
+The javascript file are loaded by each wagtail_hook. The hooks are defined in the `wagtail_hooks.py` file in each app.
